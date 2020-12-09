@@ -8,3 +8,5 @@ I'm wondering how calling `setState()` "only when the new state differs from the
 Also, isn't React smartly comparing the old state to the new state and not performing any rendering if the old and the new state are the same? Isn't this the whole point of React? So why is the programmer supposed to check if the state has been changed and _only then_ call `setState()`?
 
 [React setState API documentation]: https://reactjs.org/docs/react-component.html#setstate
+
+Potential Answer: I think the keyword is _if mutable objects are being used_. In that case, then that quote makes sense. However, as far as I know, we should always use immutable objects when using React. Using mutable objects is the exception rather than the norm AFAIK. Heck, even `React.StrictMode`'s whole purpose is this AFAIK. That is, `React.StrictMode`'s whole purpose is to break your program if your program uses mutable objects, forcing you to write your program using immutable objects.
