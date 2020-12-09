@@ -9,4 +9,4 @@ Also, isn't React smartly comparing the old state to the new state and not perfo
 
 [React setState API documentation]: https://reactjs.org/docs/react-component.html#setstate
 
-Potential Answer: I think the keyword is _if mutable objects are being used_. In that case, then that quote makes sense. However, as far as I know, we should always use immutable objects when using React. Using mutable objects is the exception rather than the norm AFAIK. Heck, even `React.StrictMode`'s whole purpose is this AFAIK. That is, `React.StrictMode`'s whole purpose is to break your program if your program uses mutable objects, forcing you to write your program using immutable objects.
+Potential Answer: I think the keyword is _if mutable objects are being used_. In that case, then that quote makes sense. However, as far as I know, we should always use immutable objects when using React. Using mutable objects is the exception rather than the norm AFAIK. Heck, even `React.StrictMode`'s whole purpose is this AFAIK. That is, `React.StrictMode`'s whole purpose is to break your program if your program uses mutable objects, forcing you to re-write your program using immutable objects.
